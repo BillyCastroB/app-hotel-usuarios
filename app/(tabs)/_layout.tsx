@@ -20,10 +20,12 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            display: 'none', // Ocultar la barra de pestañas
           },
-          default: {},
+          default: {
+            display: 'none', // Ocultar para otras plataformas
+          },
         }),
       }}>
       <Tabs.Screen
